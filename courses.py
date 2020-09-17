@@ -1,5 +1,4 @@
 from teacher import Teacher
-from enroll import Enroll
 
 class Courses:
     def  __init__(self, name, code, max_, min_, teacher):
@@ -27,7 +26,8 @@ class Courses:
         self.teachers.append(teacher)
 
     def add_enroll(self, enroll):
-        if not isinstance(enroll, Enroll):
+        import enroll
+        if not isinstance(enroll, enroll.Enroll):
             raise NameError("Invalid Enroll")
         if len(self.enrollments) == self.max:
             raise EnvironmentError("Cannot enroll, course is full...")
@@ -35,8 +35,3 @@ class Courses:
     
     def is_cancelled(self):
         return len(self.enrollments) < self.min
-
-    
-
-
-    

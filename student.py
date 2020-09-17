@@ -10,6 +10,7 @@ class Student(Person):
     def add_enroll(self, enroll):
         if not isinstance(enroll, Enroll):
             raise NameError("Invalid Enroll")
+        self.enrolled.append(enroll)
 
     def isPartTime(self):
         return False

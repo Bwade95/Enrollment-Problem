@@ -1,10 +1,10 @@
 from courses import Courses
-from student import Student
 from datetime import datetime
 
 class Enroll:
     def __init__(self, student, courses):
-        if not isinstance(student, Student):
+        import student
+        if not isinstance(student, student.Student):
             raise NameError("Invalid Student...")
         if not isinstance(courses, Courses):
             raise NameError("Invalid course...")

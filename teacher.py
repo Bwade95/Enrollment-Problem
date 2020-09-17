@@ -1,8 +1,7 @@
 from person import Person
-from courses import Courses
 
 class Teacher(Person):
-    def __init__(self, firstName, lastName, dob, phoneNum, address, salary, courses):
+    def __init__(self, firstName, lastName, dob, phoneNum, address, salary):
         super().__init__(firstName, lastName, dob, phoneNum, address)
         self.salary = salary
         self.courses = []
@@ -14,5 +13,8 @@ class Teacher(Person):
             self.got_raise = True
 
     def add_course(self, courses):
-        if not isinstance(courses, Courses):
+        import courses
+        if not isinstance(courses, courses.Courses):
             raise NameError("Invalid course...")
+        
+        self.courses.append(courses)
