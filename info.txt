@@ -1,0 +1,39 @@
+Address
+- streetAddress: string
+- streetAddressCon: string
+- city: string
+- country: string
+- county: string
+- postCode: string
+
+
+Person
+- firstName: string
+- lastName: string
+- dateOfBirth: date
+- phoneNumber: string
+
+
+Professors Class
+- salary: float
+
+
+Students Class
+- international: boolean
+- isPartTime(): boolean
+- isOnProbation(): boolean
+
+
+Courses Class
+- name: string
+- code: string
+- minStudents: int
+- maxStudents: int
+- start: date
+- end: date
+- isCancelled(): boolean
+
+
+Enrol Class
+- date: date
+- grade: int
